@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Recipe Collection</title>
+    <link rel="stylesheet" href="simple_recipe_style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="main-header">
+        <h1>My Recipe Collection</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#recipes">Recipes</a>
+            <a href="#nutrition">Nutrition</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Welcome Section -->
+    <section id="home" class="welcome-section">
+        <h2>Welcome to My Kitchen!</h2>
+        <p>Discover delicious and easy-to-make recipes that will make your meals special. From breakfast to dinner,
+            we've got you covered with simple, healthy, and tasty dishes.</p>
+    </section>
+
+    <!-- Recipe Cards Section -->
+    <section id="recipes" class="recipes-section">
+        <h2 class="section-title">Featured Recipes</h2>
+
+        <!-- Recipe 1 -->
+        <div class="recipe-card">
+            <img src="css/assets/salad.jpg" alt="Fresh Salad">
+            <div class="recipe-content">
+                <h3>Fresh Garden Salad</h3>
+                <p class="cook-time"><i class="fa-regular fa-clock"></i> Prep time: 15 minutes</p>
+
+                <h4>Ingredients:</h4>
+                <ul class="ingredients-list">
+                    <li>Mixed greens</li>
+                    <li>Cherry tomatoes</li>
+                    <li>Cucumber</li>
+                </ul>
+
+                <h4>Instructions:</h4>
+                <ol class="instructions-list">
+                    <li>Wash all vegetables thoroughly</li>
+                    <li>Chop vegetables into bite-sized pieces</li>
+                    <li>Mix greens in a large bowl</li>
+                    <li>Add dressing and toss gently</li>
+                    <li>Serve immediately</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Recipe 2 -->
+        <div class="recipe-card">
+            <img src="css/assets/pexels-ella-olsson-572949-1640772.jpg" alt="Pasta Dish">
+            <div class="recipe-content">
+                <h3>Classic Pasta Primavera</h3>
+                <p class="cook-time"><i class="fa-regular fa-clock"></i> Prep time: 30 minutes</p>
+
+                <h4>Ingredients:</h4>
+                <ul class="ingredients-list">
+                    <li>Pasta (penne or spaghetti)</li>
+                    <li>Bell peppers</li>
+                    <li>Zucchini</li>
+                </ul>
+
+                <h4>Instructions:</h4>
+                <ol class="instructions-list">
+                    <li>Boil pasta according to package directions</li>
+                    <li>Sauté vegetables in olive oil</li>
+                    <li>Add garlic and cook until fragrant</li>
+                    <li>Combine pasta with vegetables</li>
+                    <li>Top with parmesan and serve hot</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Recipe 3 -->
+        <div class="recipe-card">
+            <img src="css/assets/pexels-janetrangdoan-1099680.jpg" alt="Breakfast Bowl">
+            <div class="recipe-content">
+                <h3>Healthy Breakfast Bowl</h3>
+                <p class="cook-time"><i class="fa-regular fa-clock"></i> Prep time: 10 minutes</p>
+
+                <h4>Ingredients:</h4>
+                <ul class="ingredients-list">
+                    <li>Greek yogurt</li>
+                    <li>Fresh berries</li>
+                    <li>Granola</li>
+                </ul>
+
+                <h4>Instructions:</h4>
+                <ol class="instructions-list">
+                    <li>Add yogurt to a bowl</li>
+                    <li>Top with fresh berries</li>
+                    <li>Sprinkle granola on top</li>
+                    <li>Drizzle with honey</li>
+                    <li>Add chia seeds and enjoy</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nutrition Table Section -->
+    <section id="nutrition" class="nutrition-section">
+        <h2 class="section-title">Nutrition Facts</h2>
+
+        <table class="nutrition-table">
+            <thead>
+                <tr>
+                    <th>Recipe</th>
+                    <th>Calories</th>
+                    <th>Protein (g)</th>
+                    <th>Carbs (g)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">Fresh Garden Salad</td>
+                    <td>150</td>
+                    <td>5</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><i>Low calorie, high fiber option</i></td>
+                </tr>
+                <tr>
+                    <td>Classic Pasta Primavera</td>
+                    <td>420</td>
+                    <td>15</td>
+                    <td>65</td>
+                </tr>
+                <tr>
+                    <td>Healthy Breakfast Bowl</td>
+                    <td>280</td>
+                    <td>12</td>
+                    <td>38</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Average per serving</b></td>
+                    <td><b>11</b></td>
+                    <td><b>38</b></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Share Your Feedback</h2>
+
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="favorite">Favorite Recipe:</label>
+                <select id="favorite" name="favorite">
+                    <option value="">-- Select a recipe --</option>
+                    <option value="salad">Fresh Garden Salad</option>
+                    <option value="pasta">Classic Pasta Primavera</option>
+                    <option value="breakfast">Healthy Breakfast Bowl</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell us what you think..."></textarea>
+            </div>
+
+            <div class="form-buttons">
+                <button type="reset">Reset</button>
+                <button type="submit">Send Message</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <p>&copy; 2025 My Recipe Collection</p>
+        <p>Created by: Hok Sochetra</p>
+        <div class="contact-info">
+            <div class="fb">
+                <a href="https://web.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <div>Facebook</div>
+            </div>
+            <div class="ig">
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <div>Instagram</div>
+            </div>
+            <div class="git">
+                <a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <div>Github</div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
