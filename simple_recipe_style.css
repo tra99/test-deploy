@@ -1,0 +1,365 @@
+/* ===================================
+   SIMPLE RECIPE WEBSITE CSS
+   Demonstrates all CSS concepts from lessons
+   =================================== */
+
+/* === RESET & BASE === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* === HEADER === */
+/* Demonstrates: position: sticky, background gradient */
+.main-header {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+    color: white;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.main-header h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.main-header nav {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Demonstrates: :hover pseudo-class */
+.main-header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.main-header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* === WELCOME SECTION === */
+/* Demonstrates: background-image, background properties */
+.welcome-section {
+    background-image: linear-gradient(rgba(255, 107, 107, 0.7), rgba(238, 90, 111, 0.7)),
+        url('css/assets/pexels-ash-craig-122861-376464.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.welcome-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Demonstrates: ::first-letter pseudo-element */
+.welcome-section p::first-letter {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffe66d;
+}
+
+.welcome-section p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* === RECIPES SECTION === */
+.recipes-section {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #ff6b6b;
+    position: relative;
+}
+
+/* Demonstrates: ::after pseudo-element */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #ff6b6b;
+    margin: 0.5rem auto;
+}
+
+/* Demonstrates: float property */
+.recipe-card {
+    background: white;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* Demonstrates: :hover with transform */
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Demonstrates: overflow: hidden */
+.recipe-card img {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    float: left;
+    margin-right: 2rem;
+}
+
+.recipe-content {
+    padding: 1.5rem;
+}
+
+.recipe-content h3 {
+    color: #ff6b6b;
+    margin-bottom: 0.5rem;
+}
+
+.cook-time {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.recipe-content h4 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+/* Demonstrates: ::before for custom list markers */
+.ingredients-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.ingredients-list li {
+    padding: 0.3rem 0;
+}
+
+.ingredients-list li::before {
+    content: '🥕 ';
+    font-size: 1rem;
+}
+
+/* Demonstrates: ::marker pseudo-element */
+.instructions-list {
+    padding-left: 2rem;
+}
+
+.instructions-list li {
+    padding: 0.3rem 0;
+}
+
+.instructions-list li::marker {
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+/* === NUTRITION TABLE SECTION === */
+.nutrition-section {
+    padding: 3rem 2rem;
+    background-color: white;
+}
+
+.nutrition-section .section-title {
+    margin-bottom: 2rem;
+}
+
+.nutrition-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nutrition-table thead {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+    color: white;
+}
+
+.nutrition-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+.nutrition-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+/* Demonstrates: :hover on table rows */
+.nutrition-table tbody tr:hover {
+    background-color: #fff5f5;
+}
+
+/* === CONTACT SECTION === */
+.contact-section {
+    padding: 3rem 2rem;
+    background-color: #f9f9f9;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+/* Demonstrates: :focus pseudo-class */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #ff6b6b;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.form-buttons button {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-buttons button[type="reset"] {
+    background-color: #ddd;
+    color: #333;
+}
+
+.form-buttons button[type="reset"]:hover {
+    background-color: #ccc;
+}
+
+.form-buttons button[type="submit"] {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+    color: white;
+}
+
+.form-buttons button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(255, 107, 107, 0.3);
+}
+
+/* === FOOTER === */
+.main-footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.main-footer p {
+    margin: 0.5rem 0;
+}
+
+/* Demonstrates: ::before decorative element */
+.main-footer p:first-child::before {
+    content: '🍴 ';
+}
+
+/* === CONTACT INFO SECTION === */
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+/* Icon styling */
+.contact-info a {
+    display: block;
+    color: white;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Text styling */
+.contact-info p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Hover colors for each platform */
+.contact-info .fb a:hover {
+    color: #1877f2;
+}
+
+.contact-info .ig a:hover {
+    color: #e4405f;
+}
+
+.contact-info .git a:hover {
+    color: #6e5494;
+}
